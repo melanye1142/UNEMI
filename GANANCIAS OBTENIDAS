@@ -1,0 +1,32 @@
+Algoritmo GananciaVinicultores
+    Definir kilos, precioInicial Como Real
+    Definir tipo Como Caracter
+    Definir tamano Como Entero
+    Definir ganancia Como Real
+
+    Escribir "Este programa calcula la ganancia según el tipo de uva, tamaño y cantidad vendida."
+    Escribir "Ingrese el número de kilos entregados por el productor:"
+    Leer kilos
+    Escribir "Ingrese el precio inicial por kilo:"
+    Leer precioInicial
+    Escribir "Ingrese el tipo de uva (A o B):"
+    Leer tipo
+    Escribir "Ingrese el tamaño de la uva (1 o 2):"
+    Leer tamano
+
+    Si (tipo = "A") Entonces
+        Si (tamano = 1) Entonces
+            ganancia = (precioInicial * kilos) + (kilos * 0.20)
+        Sino
+            ganancia = (precioInicial * kilos) + (kilos * 0.30)
+        FinSi
+    Sino
+        Si (tamano = 1) Entonces
+            ganancia = (precioInicial * kilos) - (kilos * 0.30)
+        Sino
+            ganancia = (precioInicial * kilos) - (kilos * 0.50)
+        FinSi
+    FinSi
+
+    Escribir "La ganancia obtenida es: ", ganancia
+FinAlgoritmo
