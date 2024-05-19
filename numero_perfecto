@@ -1,0 +1,20 @@
+Algoritmo numero_perfecto
+	Definir numero, sumaDivisores, divisor Como Entero
+	
+    Escribir "Ingrese un número:"
+    Leer numero
+	
+    sumaDivisores <- 0
+	
+    Para divisor <- 1 Hasta numero/2 Hacer
+        Si numero MOD divisor = 0 Entonces
+            sumaDivisores <- sumaDivisores + divisor
+        FinSi
+    FinPara
+	
+    Si sumaDivisores = numero Entonces
+        Escribir "El número ", numero, " es perfecto."
+    Sino
+        Escribir "El número ", numero, " no es perfecto."
+    FinSi
+FinAlgoritmo
