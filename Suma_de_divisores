@@ -1,0 +1,21 @@
+Algoritmo Suma_de_divisores
+	// Este algoritmo calcula la suma de los divisores de un número
+    
+    // Solicitamos al usuario que ingrese el número
+    Escribir "Ingrese un número:"
+    Leer numero
+    
+    // Inicializamos la variable sumaDivisores en 0
+    sumaDivisores <- 0
+    
+    // Iteramos desde 1 hasta el número ingresado
+    Para i <- 1 Hasta numero Con Paso 1 Hacer
+        // Si i es divisor de numero, lo sumamos a sumaDivisores
+        Si numero MOD i == 0 Entonces
+            sumaDivisores <- sumaDivisores + i
+        FinSi
+    FinPara
+    
+    // Mostramos la suma de los divisores
+    Escribir "La suma de los divisores de ", numero, " es: ", sumaDivisores
+FinAlgoritmo
