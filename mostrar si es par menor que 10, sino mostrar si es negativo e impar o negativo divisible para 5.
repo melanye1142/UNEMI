@@ -1,0 +1,30 @@
+Algoritmo  par_menor_que_10_impar_o_negativo_divisible_para_5.
+	// Declaración de variables
+    Definir numero Como Entero
+    
+    // Solicitar al usuario un número
+    Escribir "Introduce un número:"
+    Leer numero
+    
+    // Verificar las condiciones y mostrar el resultado
+    Si numero MOD 2 = 0 Entonces
+        // Si es par
+        Si numero < 10 Entonces
+            Escribir "El número es par y menor que 10."
+        SiNo
+            Escribir "El número es par y mayor o igual a 10."
+        FinSi
+    SiNo
+        // Si es impar
+        Si numero < 0 Entonces
+            // Si es negativo
+            Si numero MOD 5 = 0 Entonces
+                Escribir "El número es negativo e impar y divisible por 5."
+            SiNo
+                Escribir "El número es negativo e impar."
+            FinSi
+        SiNo
+            Escribir "El número es positivo e impar."
+        FinSi
+    FinSi
+FinAlgoritmo
