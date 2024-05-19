@@ -1,0 +1,34 @@
+Algoritmo aumento_de_credito
+	// Declaración de variables
+    Definir tipoTarjeta Como Entero
+    Definir limiteActual Como Real
+    Definir aumentoInicial Como Real
+    Definir nuevoLimite Como Real
+	
+    // Entrada de datos
+    Escribir "Ingrese el tipo de tarjeta (1, 2, 3 o cualquier otro número): "
+    Leer tipoTarjeta
+    Escribir "Ingrese el límite de crédito actual: "
+    Leer limiteActual
+	
+    // Determinar el aumento inicial según el tipo de tarjeta
+    Segun tipoTarjeta Hacer
+        1:
+            aumentoInicial = 100
+        2:
+            aumentoInicial = 200
+        3:
+            aumentoInicial = 300
+        De Otro Modo:
+            aumentoInicial = 500
+    FinSegun
+	
+    // Calcular el nuevo límite de crédito después del aumento inicial
+    nuevoLimite = limiteActual + aumentoInicial
+	
+    // Aumentar el 10% adicional al nuevo límite
+    nuevoLimite = nuevoLimite * 1.10
+	
+    // Mostrar el nuevo límite de crédito
+    Escribir "El nuevo límite de crédito es: ", nuevoLimite
+FinAlgoritmo
