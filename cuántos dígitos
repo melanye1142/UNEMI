@@ -1,0 +1,16 @@
+Algoritmo contar_digitos
+	Definir numero, contador Como Entero
+    
+    Escribir "Ingrese un número entero:"
+    Leer numero
+    
+    contador <- 0
+    
+    Mientras numero <> 0 Hacer
+        numero <- numero / 10
+        contador <- contador + 1
+    Fin Mientras
+    
+    Escribir "El número tiene ", contador, " dígitos."
+
+FinAlgoritmo
