@@ -1,0 +1,33 @@
+Algoritmo Costo_por_cita
+	Definir num_cita, costo_cita, total_pagado Como Real
+    
+    // Solicitar el número de cita al paciente
+    Escribir "Ingrese el número de cita:"
+    Leer num_cita
+    
+    // Inicializar el total pagado
+    total_pagado = 0
+    
+    // Determinar el costo de la cita actual y el total pagado hasta la cita actual
+    Si num_cita <= 3 Entonces
+        costo_cita = 200
+        total_pagado = num_cita * 200
+    Sino
+        Si num_cita <= 5 Entonces
+            costo_cita = 150
+            total_pagado = 3 * 200 + (num_cita - 3) * 150
+        Sino
+            Si num_cita <= 8 Entonces
+                costo_cita = 100
+                total_pagado = 3 * 200 + 2 * 150 + (num_cita - 5) * 100
+            Sino
+                costo_cita = 50
+                total_pagado = 3 * 200 + 2 * 150 + 3 * 100 + (num_cita - 8) * 50
+            FinSi
+        FinSi
+    FinSi
+    
+    // Mostrar el costo de la cita actual y el total pagado
+    Escribir "El costo de la cita es: $", costo_cita
+    Escribir "El total pagado hasta la cita ", num_cita, " es: $", total_pagado	
+FinAlgoritmo
