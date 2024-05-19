@@ -1,0 +1,44 @@
+Algoritmo calcular_precio_de_embarque
+	Definir tipo Como Cadena
+    Definir tamano Como Entero
+    Definir precio_inicial, precio_final, precio_con_iva, descuento, iva Como Real
+    
+    // Entradas
+    Escribir "Ingrese el tipo de pitahaya (Amarilla/Colorada): "
+    Leer tipo
+    Escribir "Ingrese el tamaño de la pitahaya (1/2): "
+    Leer tamano
+    Escribir "Ingrese el precio inicial del quintal: "
+    Leer precio_inicial
+	
+    // Inicializar precio_final con el precio inicial
+    precio_final = precio_inicial
+    
+    // Calcular el precio según el tipo y tamaño
+ 
+	Si tipo = "Amarilla" Entonces
+        Si tamano = 1 Entonces
+            precio_final = precio_inicial + 10
+        SiNo
+            precio_final = precio_inicial * 1.15 + 5
+        FinSi
+	finsi
+		Si tipo = "Colorada" Entonces
+        Si tamano = 1 Entonces
+            precio_final = precio_inicial - 20
+        SiNo
+            precio_final = precio_inicial * 0.80
+        FinSi
+    finsi
+    
+    // Aplicar descuento del 5%
+    descuento = precio_final * 0.05
+    precio_final = precio_final - descuento
+    
+    // Aplicar IVA del 12%
+    iva = precio_final * 0.12
+    precio_con_iva = precio_final + iva
+    
+    // Salida
+    Escribir "El precio de embarque es: $", precio_con_iva
+FinAlgoritmo
