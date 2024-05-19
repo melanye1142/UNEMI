@@ -1,0 +1,29 @@
+Algoritmo limite_de_tajeta
+	// Declaración de variables
+    Definir tipoTarjeta Como Entero
+    Definir limiteActual, nuevoLimite Como Real
+	
+    // Solicitar el tipo de tarjeta y el límite actual
+    Escribir "Ingrese el tipo de tarjeta (1, 2, 3, otro):"
+    Leer tipoTarjeta
+    Escribir "Ingrese el límite de crédito actual:"
+    Leer limiteActual
+	
+    // Calcular el nuevo límite según el tipo de tarjeta
+    Segun tipoTarjeta Hacer
+        1:
+            nuevoLimite = limiteActual * 1.25
+        2:
+            nuevoLimite = limiteActual * 1.35
+        3:
+            nuevoLimite = limiteActual * 1.40
+        De Otro Modo:
+            nuevoLimite = limiteActual * 1.50
+    FinSegun
+	
+    // Añadir el aumento adicional de $20
+    nuevoLimite = nuevoLimite + 20
+	
+    // Mostrar el nuevo límite de crédito
+    Escribir "El nuevo límite de crédito es: ", nuevoLimite
+FinAlgoritmo
