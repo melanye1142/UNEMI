@@ -1,0 +1,30 @@
+Algoritmo PrimosGemelos
+    Definir num1, num2, i, cont1, cont2 como Entero
+    
+    Escribir "Ingrese el primer número:"
+    Leer num1
+    
+    Escribir "Ingrese el segundo número:"
+    Leer num2
+    
+    cont1 <- 0
+    cont2 <- 0
+    
+    Para i <- 2 Hasta num1/2 Con Paso 1 Hacer
+        Si num1 MOD i = 0 Entonces
+            cont1 <- cont1 + 1
+        FinSi
+    FinPara
+    
+    Para i <- 2 Hasta num2/2 Con Paso 1 Hacer
+        Si num2 MOD i = 0 Entonces
+            cont2 <- cont2 + 1
+        FinSi
+    FinPara
+    
+    Si cont1 = 0 Y cont2 = 0 Y Abs(num1 - num2) = 2 Entonces
+        Escribir "Los números", num1, "y", num2, "son primos gemelos."
+    Sino
+        Escribir "Los números ingresados no son primos gemelos."
+    FinSi
+FinAlgoritmo
