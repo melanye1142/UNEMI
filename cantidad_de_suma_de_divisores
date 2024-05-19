@@ -1,0 +1,16 @@
+Algoritmo cantidad_de_suma_de_divisores
+	Definir numero, suma, divisor como Entero
+	
+    Escribir "Ingrese un número:"
+    Leer numero
+	
+    suma <- 0
+	
+    Para divisor <- 1 Hasta numero Hacer
+        Si numero MOD divisor == 0 Entonces
+            suma <- suma + divisor
+        FinSi
+    FinPara
+	
+    Escribir "La suma de los divisores de ", numero, " es: ", suma
+FinAlgoritmo
