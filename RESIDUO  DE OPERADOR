@@ -1,0 +1,24 @@
+Algoritmo calcular_residuo
+	// Declaración de variables
+    Definir num1, num2, cociente, residuo Como Entero
+    
+    // Solicitar al usuario los dos números
+    Escribir "Ingrese el primer número (dividendo):"
+    Leer num1
+    Escribir "Ingrese el segundo número (divisor):"
+    Leer num2
+    
+    // Verificar que el divisor no sea cero
+    Si num2 = 0 Entonces
+        Escribir "El divisor no puede ser cero."
+    Sino
+        // Calcular el cociente usando división entera
+        cociente <- Trunc(num1 / num2)
+        
+        // Calcular el residuo usando la fórmula: residuo = dividendo - (divisor * cociente)
+        residuo <- num1 - (num2 * cociente)
+        
+        // Mostrar el resultado
+        Escribir "El residuo de la división es: ", residuo
+    FinSi
+FinAlgoritmo
